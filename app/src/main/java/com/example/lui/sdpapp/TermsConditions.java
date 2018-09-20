@@ -1,7 +1,6 @@
 package com.example.lui.sdpapp;
 
 import android.support.v4.app.FragmentActivity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
@@ -31,6 +30,10 @@ public class TermsConditions extends FragmentActivity  {
                 }
             }
         });
+
+        Details detailFragment = new Details();
+        getSupportFragmentManager().beginTransaction().add(R.id.container,detailFragment).commit();
+
 
         TextView textView =(TextView)findViewById(R.id.termsView);
         textView.setClickable(true);
