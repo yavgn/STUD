@@ -92,12 +92,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             return;
         }
 
-        if (databaseHelper.checkUser(textInputEditTextUsername.getText().toString().trim()
-                , textInputEditTextPassword.getText().toString().trim())) {
-            Intent accountsIntent = new Intent(activity, LandingActivity.class);
-            accountsIntent.putExtra("EMAIL", textInputEditTextUsername.getText().toString().trim());
+        if (databaseHelper.checkUser(textInputEditTextUsername.getText().toString().trim(), textInputEditTextPassword.getText().toString().trim())) {
+            Intent landingIntent = new Intent(activity, LandingActivity.class);
+            landingIntent.putExtra("EMAIL", textInputEditTextUsername.getText().toString().trim());
             emptyInputEditText();
-            startActivity(accountsIntent);
+            startActivity(landingIntent);
         } else {
             Snackbar.make(nestedScrollView, getString(R.string.error_valid_email_password), Snackbar.LENGTH_LONG).show();
         }
