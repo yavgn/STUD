@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/nestedScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:padding="20dp"
+    tools:context=".activities.RegisterActivity">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="1dp"
+            android:src="@drawable/logo"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputLayoutUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:textColorHint="#000000"
+            android:textSize="@dimen/text_dimension">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/textInputEditTextUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/username"
+                android:textColorHint="@color/colorText"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/colorText"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputLayoutEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColorHint="#000000"
+            android:textSize="@dimen/text_dimension">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/textInputEditTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email_reg"
+                android:textColorHint="@color/colorText"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/colorText"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputLayoutPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColorHint="#000000"
+            android:textSize="@dimen/text_dimension">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/textInputEditTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                android:textColorHint="@color/colorText"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:textColor="@color/colorText"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputLayoutConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColorHint="#000000"
+            android:textSize="@dimen/text_dimension">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/textInputEditTextConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/confirm_password_reg"
+                android:textColorHint="@color/colorText"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:textColor="@color/colorText"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/appCompatButtonRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="110dp"
+            android:layout_marginRight="110dp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/colorText"
+            android:background="@drawable/border_style"
+            android:text="@string/register"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/appCompatTextViewLoginLink"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/already_member"
+            android:textSize="12sp"
+            android:textColor="@color/colorText"/>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+</android.support.v4.widget.NestedScrollView>

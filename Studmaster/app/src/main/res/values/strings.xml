@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">STUD</string>
+    <string name="username">Username:</string>
+    <string name="password">Password:</string>
+    <string name="login">Login</string>
+    <string name="no_account">Don\'t have an account? Create One</string>
+    <string name="already_member">Already a member? Login</string>
+    <string name="register">Register</string>
+    <string name="user_id_reg">Username:</string>
+    <string name="email_reg">Email:</string>
+    <string name="password_reg">Password:</string>
+    <string name="confirm_password_reg">Confirm Password:</string>
+
+    <string name="error_message_username">Enter valid username</string>
+    <string name="error_message_email">Enter valid email</string>
+    <string name="error_message_password">Enter Password</string>
+    <string name="success_message">Registration successful</string>
+    <string name="text_already_member">Already have an account?</string>
+    <string name="error_email_exists">Email already exists</string>
+    <string name="error_password_match">Password does not match</string>
+    <string name="error_valid_email_password">Wrong username or password</string>
+
+    <string name="welcome">Welcome</string>
+</resources>
