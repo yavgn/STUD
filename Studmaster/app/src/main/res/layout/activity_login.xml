@@ -37,11 +37,11 @@
                     android:id="@+id/textInputEditTextUsername"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/username"
-                    android:textColorHint="@color/colorText"
+                    android:hint="@string/email"
                     android:inputType="text"
                     android:maxLines="1"
-                    android:textColor="#000000"/>
+                    android:textColor="#000000"
+                    android:textColorHint="@color/colorText" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
