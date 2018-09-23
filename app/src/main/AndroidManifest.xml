@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".TimeTable" />
         <activity android:name=".Calander" />
-        <activity android:name=".PersonalDetails"></activity>
+        <activity android:name=".PersonalDetails" />
+        <activity android:name=".Search"></activity>
     </application>
 
 </manifest>
