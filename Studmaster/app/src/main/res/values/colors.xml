@@ -6,4 +6,5 @@
     <color name="colorText">#000000</color>
     <color name="colorTextView">#696969</color>
     <color name="colorBackground">#FFFFFF</color>
+    <color name="fab_pressed">#546e7a</color>
 </resources>

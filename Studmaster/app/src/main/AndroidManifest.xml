@@ -18,13 +18,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".activities.RegisterActivity"
-            android:screenOrientation="portrait"/>
-        
-        <activity android:name=".activities.LandingActivity"
-            android:screenOrientation="portrait"/>
-
+        <activity
+            android:name=".activities.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.LandingActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.AddReminderActivity" />
+        <activity android:name=".activities.AlertActivity"></activity>
     </application>
 
 </manifest>
