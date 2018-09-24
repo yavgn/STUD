@@ -100,16 +100,19 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             return;
         }
 
-        if (databaseHelper.checkUser(textInputEditTextUsername.getText().toString().trim()
-                , textInputEditTextPassword.getText().toString().trim())) {
-            Intent accountsIntent = new Intent(activity, LandingActivity.class);
-            accountsIntent.putExtra("EMAIL", textInputEditTextUsername.getText().toString().trim());
+        if (databaseHelper.checkUser(textInputEditTextUsername.getText().toString().trim(), textInputEditTextPassword.getText().toString().trim())) {
+            Intent landingIntent = new Intent(activity, LandingActivity.class);
+            landingIntent.putExtra("EMAIL", textInputEditTextUsername.getText().toString().trim());
             emptyInputEditText();
+<<<<<<< HEAD
             accountsIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             accountsIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(accountsIntent);
             session.setLoggedIn(true);
 
+=======
+            startActivity(landingIntent);
+>>>>>>> landingPage-&-login
         } else {
             Snackbar.make(nestedScrollView, getString(R.string.error_valid_email_password), Snackbar.LENGTH_LONG).show();
         }
