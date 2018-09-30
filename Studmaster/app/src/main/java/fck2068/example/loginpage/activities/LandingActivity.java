@@ -7,20 +7,14 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 import fck2068.example.loginpage.R;
 
@@ -39,7 +33,7 @@ public class LandingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_landing);
+        setContentView(R.layout.landing_activity);
         session = new Session(this);
         if(!session.statusLoggedIn()){
             logout();
@@ -98,7 +92,7 @@ public class LandingActivity extends AppCompatActivity {
         int[] imgs;
 
             CustomAdapter(Context c, String[] pages, int[] imgs){
-            super(c, R.layout.row, R.id.menuNameTextView, pages);
+            super(c, R.layout.landing_row, R.id.menuNameTextView, pages);
             this.context=c;
             this.imgs = imgs;
             this.pagesMenu = pages;
@@ -107,13 +101,12 @@ public class LandingActivity extends AppCompatActivity {
         @Override
         public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent){
             LayoutInflater layoutInflater = (LayoutInflater)getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            View row = layoutInflater.inflate(R.layout.row, parent, false);
+            View row = layoutInflater.inflate(R.layout.landing_row, parent, false);
             ImageView images = row.findViewById(R.id.rowImageView);
             TextView page = row.findViewById(R.id.menuNameTextView);
             images. setImageResource(icons[position]);
             page.setText(pages[position]);
             return row;
         }
-
     }
 }
