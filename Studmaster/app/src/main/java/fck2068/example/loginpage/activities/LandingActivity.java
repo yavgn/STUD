@@ -1,5 +1,6 @@
 package fck2068.example.loginpage.activities;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -58,6 +59,8 @@ public class LandingActivity extends AppCompatActivity {
                 }
                 if(position==1){
                     Toast.makeText(LandingActivity.this, "Search clicked...", Toast.LENGTH_SHORT).show();
+                    Intent libraryIntent = new Intent(LandingActivity.this, LibraryActivity.class);
+                    startActivity(libraryIntent);
                 }
                 if(position==2){
                     Toast.makeText(LandingActivity.this, "Timetable clicked...", Toast.LENGTH_SHORT).show();
