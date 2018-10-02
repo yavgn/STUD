@@ -1,7 +1,6 @@
 package fck2068.example.loginpage.helper;
 
 import android.content.Context;
-import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,19 +10,19 @@ import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 
 import fck2068.example.loginpage.R;
+import fck2068.example.loginpage.model.Book;
+import fck2068.example.loginpage.sql.DatabaseHelper;
 
 public class LibraryAdapter extends BaseAdapter implements Filterable{
 
     Context c;
-    ArrayList<SingleRow> originalArray, tempArray;
+    ArrayList<Book> originalArray, tempArray;
     CustomFilter cs;
 
-    public LibraryAdapter(Context c, ArrayList<SingleRow> originalArray){
+    public LibraryAdapter(Context c, ArrayList<Book> originalArray){
         this.c = c;
         this.originalArray = originalArray;
         this.tempArray = originalArray;
@@ -78,14 +77,14 @@ public class LibraryAdapter extends BaseAdapter implements Filterable{
 
             if(constraint!=null && constraint.length()>0) {
                 constraint = constraint.toString().toUpperCase();
-                ArrayList<SingleRow> filters = new ArrayList<>();
+                ArrayList<Book> filters = new ArrayList<>();
 
                 //use a for loop to go to all the indexes to check if the constraint is present or not
                 //if constraint matches it will set the results to equal the match
                 for (int i = 0; i < tempArray.size(); i++) {
                     if (tempArray.get(i).getTitle().toUpperCase().contains(constraint)) {
-                        SingleRow singleRow = new SingleRow(tempArray.get(i).getTitle(), tempArray.get(i).getImage(), tempArray.get(i).getDescription());
-                        filters.add(singleRow);
+                        Book book = new Book(tempArray.get(i).getTitle(), tempArray.get(i).getImage(), tempArray.get(i).getDescription());
+                        filters.add(book);
                     }
                 }
 
@@ -102,7 +101,7 @@ public class LibraryAdapter extends BaseAdapter implements Filterable{
 
         @Override
         protected void publishResults(CharSequence constraint, FilterResults results) {
-            originalArray = (ArrayList<SingleRow>) results.values;
+            originalArray = (ArrayList<Book>) results.values;
             notifyDataSetChanged();
         }
     }

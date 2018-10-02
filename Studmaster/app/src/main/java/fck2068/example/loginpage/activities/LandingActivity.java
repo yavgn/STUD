@@ -25,7 +25,6 @@ public class LandingActivity extends AppCompatActivity {
     private TextView textViewName;
     Session session;
 
-
     String[] pages = {"Notifications", "Search", "Timetable", "Location"};
     int[] icons = {R.drawable.notifications_icon, R.drawable.serach_icon, R.drawable.calendar_icon, R.drawable.location_icon};
     ListView list;

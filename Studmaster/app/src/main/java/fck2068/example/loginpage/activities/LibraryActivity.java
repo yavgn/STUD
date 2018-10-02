@@ -11,7 +11,8 @@ import java.util.ArrayList;
 
 import fck2068.example.loginpage.R;
 import fck2068.example.loginpage.helper.LibraryAdapter;
-import fck2068.example.loginpage.helper.SingleRow;
+import fck2068.example.loginpage.model.Book;
+import fck2068.example.loginpage.sql.DatabaseHelper;
 
 public class LibraryActivity extends AppCompatActivity implements TextWatcher{
 
@@ -21,8 +22,9 @@ public class LibraryActivity extends AppCompatActivity implements TextWatcher{
     String[] title = {"Human Resources Management", "Java: The Good Parts", "PHP: For Absolute Beginners", "Project Management: Twelfth Edition"};
     int[] images = {R.drawable.hr_book, R.drawable.java_book, R.drawable.php_book, R.drawable.pm_book};
     String[] descriptions = {"A guide to managing hoomans", "Only the essentials, no demoing", "Recommended as a base for little to zero experience", "12th edition, keep em coming"};
-    ArrayList<SingleRow> books;
+    ArrayList<Book> books;
     LibraryAdapter libraryAdapter;
+    private DatabaseHelper databaseHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,12 +35,12 @@ public class LibraryActivity extends AppCompatActivity implements TextWatcher{
         bookList = (ListView) findViewById(R.id.bookList);
         searchEditText.addTextChangedListener(this);
         books = new ArrayList<>();
-        SingleRow singleRow;
+        Book book;
 
         //loop to initialize ArrayList books
         for(int i = 0;i < title.length; i++){
-            singleRow = new SingleRow(title[i], images[i], descriptions[i]);
-            books.add(singleRow);
+            book = new Book(title[i], images[i], descriptions[i]);
+            books.add(book);
         }
         //send ArrayList to LibraryAdapter class
         libraryAdapter = new LibraryAdapter(this, books);

@@ -1,12 +1,12 @@
-package fck2068.example.loginpage.helper;
+package fck2068.example.loginpage.model;
 
-public class SingleRow {
+public class Book {
 
     String title;
     int image;
     String description;
 
-    public SingleRow(String title, int image, String description) {
+    public Book(String title, int image, String description) {
         this.title = title;
         this.image = image;
         this.description = description;
