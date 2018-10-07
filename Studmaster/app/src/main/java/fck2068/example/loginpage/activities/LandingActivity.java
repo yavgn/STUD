@@ -6,7 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.NavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.view.LayoutInflater;
@@ -41,6 +44,43 @@ public class LandingActivity extends AppCompatActivity {
         String nameFromIntent = "Welcome "+getIntent().getStringExtra("EMAIL");
         Toast.makeText(this, nameFromIntent, Toast.LENGTH_LONG).show();
 
+        BottomNavigationView topNavigationView = (BottomNavigationView) findViewById(R.id.top_navigation);
+        topNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.action_settings:
+                        Toast.makeText(LandingActivity.this, "Settings clicked...", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.action_logo:
+                        Toast.makeText(LandingActivity.this, "Logo clicked...", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.action_account:
+                        Toast.makeText(LandingActivity.this, "Account clicked...", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+                return true;
+            }
+        });
+
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch(item.getItemId()){
+                    case R.id.action_mail:
+                        Toast.makeText(LandingActivity.this, "Mail clicked...", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.action_messenger:
+                        Toast.makeText(LandingActivity.this, "Messenger clicked...", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.action_more:
+                        Toast.makeText(LandingActivity.this, "Timer clicked...", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+                return true;
+            }
+        });
 
         list = (ListView) findViewById(R.id.landingListView);
         //create a CustomAdapter
