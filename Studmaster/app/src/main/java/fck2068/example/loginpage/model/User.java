@@ -7,7 +7,8 @@ public class User {
     private String username;
     private String email;
     private String password;
-
+    
+    //getter and setters
     public int getId(){
         return id;
     }
