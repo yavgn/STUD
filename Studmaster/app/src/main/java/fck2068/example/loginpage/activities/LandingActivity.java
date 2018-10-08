@@ -30,16 +30,17 @@ public class LandingActivity extends AppCompatActivity {
     private TextView textViewName;
     Session session;
 
-
+    //Arrary for listview
     String[] pages = {"Notifications", "Search", "Timetable", "Location"};
     int[] icons = {R.drawable.notifications_icon, R.drawable.serach_icon, R.drawable.calendar_icon, R.drawable.location_icon};
     ListView list;
 
-
+    //
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_landing);
+        //session to stay logged in without having to signin everytime
         session = new Session(this);
         if(!session.statusLoggedIn()){
             logout();
@@ -73,6 +74,7 @@ public class LandingActivity extends AppCompatActivity {
                 }
             }
         });
+        //logout not fully implented yet
         /*
         logoutButton = (Button)findViewById(R.id.logoutButton);
         logoutButton.setOnclickListener(new View.OnClickListener(){
@@ -84,7 +86,7 @@ public class LandingActivity extends AppCompatActivity {
         */
 
     }
-
+    //logout session
     private void logout(){
         session.setLoggedIn(false);
         finish();
