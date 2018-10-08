@@ -23,9 +23,11 @@ import android.widget.Toast;
 import fck2068.example.loginpage.R;
 
 //CLASS to get the extras that we passed
-public class LandingActivity extends AppCompatActivity {
+public class LandingActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView textViewName;
+    private ImageView settings;
+    private ImageView home;
+    private ImageView account;
     Session session;
 
     String[] pages = {"Notifications", "Search", "Timetable", "Location"};
@@ -44,24 +46,12 @@ public class LandingActivity extends AppCompatActivity {
         String nameFromIntent = "Welcome "+getIntent().getStringExtra("EMAIL");
         Toast.makeText(this, nameFromIntent, Toast.LENGTH_LONG).show();
 
-        BottomNavigationView topNavigationView = (BottomNavigationView) findViewById(R.id.top_navigation);
-        topNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.action_settings:
-                        Toast.makeText(LandingActivity.this, "Settings clicked...", Toast.LENGTH_SHORT).show();
-                        break;
-                    case R.id.action_logo:
-                        Toast.makeText(LandingActivity.this, "Logo clicked...", Toast.LENGTH_SHORT).show();
-                        break;
-                    case R.id.action_account:
-                        Toast.makeText(LandingActivity.this, "Account clicked...", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                return true;
-            }
-        });
+        settings = (ImageView) findViewById(R.id.settingsImageView);
+        home = (ImageView) findViewById(R.id.logoImageView);
+        account = (ImageView) findViewById(R.id.accountImageView);
+        settings.setOnClickListener(this);
+        home.setOnClickListener(this);
+        account.setOnClickListener(this);
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -148,7 +138,26 @@ public class LandingActivity extends AppCompatActivity {
             TextView page = row.findViewById(R.id.menuNameTextView);
             images. setImageResource(icons[position]);
             page.setText(pages[position]);
+            row.setBackground(getContext().getDrawable(R.drawable.listview_item_border));
             return row;
+        }
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.settingsImageView:
+                Toast.makeText(LandingActivity.this, "Settings clicked...", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.logoImageView:
+                Toast.makeText(LandingActivity.this, "Home clicked...", Toast.LENGTH_SHORT).show();
+                Intent intent = getIntent();
+                finish();
+                startActivity(intent);
+                break;
+            case R.id.accountImageView:
+                Toast.makeText(LandingActivity.this, "Account clicked...", Toast.LENGTH_SHORT).show();
+                break;
         }
     }
 }

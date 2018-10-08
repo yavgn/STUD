@@ -7,8 +7,7 @@
         android:enabled="true"
         android:icon="@drawable/ic_mail"
         android:title="Mail"
-        app:showAsAction="ifRoom"
-        />
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/action_messenger"
@@ -16,6 +15,13 @@
         android:icon="@drawable/ic_chat"
         android:title="Messenger"
         app:showAsAction="ifRoom" />
+
+    <!--<item-->
+        <!--android:id="@+id/action_account"-->
+        <!--android:enabled="true"-->
+        <!--android:icon="@drawable/ic_account"-->
+        <!--android:title="Account"-->
+        <!--app:showAsAction="ifRoom" />-->
 
     <item
         android:id="@+id/action_more"

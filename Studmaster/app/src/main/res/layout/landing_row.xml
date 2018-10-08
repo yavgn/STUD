@@ -5,32 +5,6 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!--<ImageView-->
-        <!--android:id="@+id/menuImageView"-->
-        <!--android:layout_width="65dp"-->
-        <!--android:layout_height="52dp"-->
-        <!--android:layout_alignParentStart="true"-->
-        <!--android:layout_alignParentTop="true"-->
-        <!--app:srcCompat="@mipmap/ic_launcher_round" />-->
-
-    <!--<TextView-->
-        <!--android:id="@+id/topBannerTextView"-->
-        <!--android:layout_width="254dp"-->
-        <!--android:layout_height="52dp"-->
-        <!--android:layout_alignParentStart="true"-->
-        <!--android:layout_alignParentTop="true"-->
-        <!--android:layout_marginStart="65dp"-->
-        <!--android:text="Top Banner placeholder"-->
-        <!--android:textSize="20sp" />-->
-
-    <!--<ImageView-->
-        <!--android:id="@+id/accountImageView"-->
-        <!--android:layout_width="65dp"-->
-        <!--android:layout_height="52dp"-->
-        <!--android:layout_alignParentEnd="true"-->
-        <!--android:layout_alignParentTop="true"-->
-        <!--app:srcCompat="@mipmap/ic_launcher_round" />-->
-
     <ImageView
         android:id="@+id/rowImageView"
         android:layout_width="100dp"
