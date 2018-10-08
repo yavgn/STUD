@@ -1,7 +1,6 @@
 package fck2068.example.loginpage.activities;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
@@ -39,8 +38,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-        getSupportActionBar().hide();
+        setContentView(R.layout.login_activity);
+       // getSupportActionBar().hide();
         session = new Session(this);
 
         initViews();

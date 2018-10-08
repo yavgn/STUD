@@ -1,6 +1,5 @@
 package fck2068.example.loginpage.activities;
 
-import android.content.Intent;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
@@ -10,11 +9,8 @@ import android.os.Bundle;
 import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.AppCompatTextView;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
 import fck2068.example.loginpage.R;
-import fck2068.example.loginpage.activities.LoginActivity;
 import fck2068.example.loginpage.helper.InputValidation;
 import fck2068.example.loginpage.model.User;
 import fck2068.example.loginpage.sql.DatabaseHelper;
@@ -45,8 +41,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
-        getSupportActionBar().hide();
+        setContentView(R.layout.register_activity);
+//        getSupportActionBar().hide();
 
         initViews();
         initListeners();

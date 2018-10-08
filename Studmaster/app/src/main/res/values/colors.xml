@@ -6,4 +6,6 @@
     <color name="colorText">#000000</color>
     <color name="colorTextView">#696969</color>
     <color name="colorBackground">#FFFFFF</color>
+    <color name="colorNavItem">#009688</color>
+    <color name="colorItemBorder">#D3D3D3</color>
 </resources>
