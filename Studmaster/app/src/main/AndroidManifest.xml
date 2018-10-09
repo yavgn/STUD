@@ -24,11 +24,8 @@
         <activity
             android:name=".activities.LandingActivity"
             android:screenOrientation="portrait" />
-<<<<<<< HEAD
         <activity android:name=".activities.LibraryActivity"></activity>
-=======
         <activity android:name=".activities.TimerActivity"></activity>
->>>>>>> Timer
     </application>
 
 </manifest>
