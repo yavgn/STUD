@@ -30,10 +30,8 @@ public class LandingActivity extends AppCompatActivity implements View.OnClickLi
     private ImageView account;
     Session session;
 
-<<<<<<< HEAD
     //Arrary for listview
-=======
->>>>>>> bottom-navigation
+
     String[] pages = {"Notifications", "Search", "Timetable", "Location"};
     int[] icons = {R.drawable.notifications_icon, R.drawable.serach_icon, R.drawable.calendar_icon, R.drawable.location_icon};
     ListView list;
@@ -42,12 +40,9 @@ public class LandingActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-<<<<<<< HEAD
-        setContentView(R.layout.activity_landing);
-        //session to stay logged in without having to signin everytime
-=======
         setContentView(R.layout.landing_activity);
->>>>>>> bottom-navigation
+        //session to stay logged in without having to signin everytime
+        setContentView(R.layout.landing_activity);
         session = new Session(this);
         if(!session.statusLoggedIn()){
             logout();
