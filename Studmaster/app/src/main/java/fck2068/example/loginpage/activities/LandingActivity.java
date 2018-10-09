@@ -69,7 +69,8 @@ public class LandingActivity extends AppCompatActivity implements View.OnClickLi
                         Toast.makeText(LandingActivity.this, "Messenger clicked...", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.action_more:
-                        Toast.makeText(LandingActivity.this, "Timer clicked...", Toast.LENGTH_SHORT).show();
+                        Intent timerIntent = new Intent(LandingActivity.this, TimerActivity.class);
+                        startActivity(timerIntent);
                         break;
                 }
                 return true;
