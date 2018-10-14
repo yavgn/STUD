@@ -22,4 +22,8 @@
 
     <string name="welcome">Welcome</string>
     <string name="email">Email</string>
+    <string name="send" />
+    <string name="cancel" />
+    <string name="subject">Subject</string>
+    <string name="add_message_here">Add message here</string>
 </resources>

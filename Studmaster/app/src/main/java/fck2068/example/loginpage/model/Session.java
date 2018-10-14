@@ -1,4 +1,4 @@
-package fck2068.example.loginpage.activities;
+package fck2068.example.loginpage.model;
 
 import android.content.Context;
 import android.content.SharedPreferences;

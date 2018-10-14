@@ -24,8 +24,9 @@
         <activity
             android:name=".activities.LandingActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".activities.LibraryActivity"></activity>
-        <activity android:name=".activities.TimerActivity"></activity>
+        <activity android:name=".activities.LibraryActivity" />
+        <activity android:name=".activities.TimerActivity" />
+        <activity android:name=".activities.EmailActivity"></activity>
     </application>
-
+    <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>

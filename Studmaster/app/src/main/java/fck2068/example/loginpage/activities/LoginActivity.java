@@ -13,6 +13,7 @@ import android.view.View;
 
 import fck2068.example.loginpage.R;
 import fck2068.example.loginpage.helper.InputValidation;
+import fck2068.example.loginpage.model.Session;
 import fck2068.example.loginpage.sql.DatabaseHelper;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
