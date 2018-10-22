@@ -28,12 +28,12 @@ public class LandingActivity extends AppCompatActivity implements View.OnClickLi
     private ImageView home;
     private ImageView account;
     Session session;
+    ListView list;
 
     //Arrary for listview
-
     String[] pages = {"Notifications", "Search", "Timetable", "Location"};
     int[] icons = {R.drawable.notifications_icon, R.drawable.serach_icon, R.drawable.calendar_icon, R.drawable.location_icon};
-    ListView list;
+
 
     //
     @Override
@@ -42,12 +42,11 @@ public class LandingActivity extends AppCompatActivity implements View.OnClickLi
         setContentView(R.layout.landing_activity);
         //session to stay logged in without having to signin everytime
         setContentView(R.layout.landing_activity);
+
         session = new Session(this);
         if(!session.statusLoggedIn()){
             logout();
         }
-        String nameFromIntent = "Welcome "+getIntent().getStringExtra("EMAIL");
-        Toast.makeText(this, nameFromIntent, Toast.LENGTH_LONG).show();
 
         settings = (ImageView) findViewById(R.id.settingsImageView);
         home = (ImageView) findViewById(R.id.logoImageView);
@@ -55,6 +54,11 @@ public class LandingActivity extends AppCompatActivity implements View.OnClickLi
         settings.setOnClickListener(this);
         home.setOnClickListener(this);
         account.setOnClickListener(this);
+
+
+
+        String nameFromIntent = "Welcome "+getIntent().getStringExtra("EMAIL");
+        Toast.makeText(this, nameFromIntent, Toast.LENGTH_LONG).show();
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -83,14 +87,12 @@ public class LandingActivity extends AppCompatActivity implements View.OnClickLi
         CustomAdapter adpater = new CustomAdapter(this, pages, icons);
         //set the list to the adapter
         list.setAdapter(adpater);
-        //handle item clicks
+        //List to handle clicks to open new activites
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if(position==0){
                     Toast.makeText(LandingActivity.this, "Notifications clicked...", Toast.LENGTH_SHORT).show();
-                    //Intent intent = new Intent(activity, LandingActivity.class);
-                    //startActivity(intent);
                 }
                 if(position==1){
                     Toast.makeText(LandingActivity.this, "Search clicked...", Toast.LENGTH_SHORT).show();
@@ -107,17 +109,6 @@ public class LandingActivity extends AppCompatActivity implements View.OnClickLi
                 }
             }
         });
-        //logout not fully implented yet
-        /*
-        logoutButton = (Button)findViewById(R.id.logoutButton);
-        logoutButton.setOnclickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                logout();
-            }
-        });
-        */
-
     }
     //logout session
     private void logout(){
@@ -151,7 +142,7 @@ public class LandingActivity extends AppCompatActivity implements View.OnClickLi
             return row;
         }
     }
-
+//Method to open up activities from images on the landing page
     @Override
     public void onClick(View view) {
         switch (view.getId()) {

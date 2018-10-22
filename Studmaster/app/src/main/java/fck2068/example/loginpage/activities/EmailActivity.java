@@ -23,10 +23,10 @@ public class EmailActivity extends AppCompatActivity {
 
         context = this;
 
-        Button sendButton  = (Button) findViewById(R.id.sendButton);
-        email = (EditText) findViewById(R.id.recepientEmail);
-        subject = (EditText) findViewById(R.id.subjectText);
-        message = (EditText) findViewById(R.id.emailBody);
+        Button sendButton  = findViewById(R.id.sendButton);
+        email = findViewById(R.id.recepientEmail);
+        subject = findViewById(R.id.subjectText);
+        message = findViewById(R.id.emailBody);
 
         sendButton.setOnClickListener(new View.OnClickListener(){
             @Override

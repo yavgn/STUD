@@ -15,16 +15,18 @@ import fck2068.example.loginpage.model.Book;
 import fck2068.example.loginpage.sql.DatabaseHelper;
 
 public class LibraryActivity extends AppCompatActivity implements TextWatcher{
+    private DatabaseHelper databaseHelper;
 
     EditText searchEditText;
     ListView bookList;
+    ArrayList<Book> books;
+    LibraryAdapter libraryAdapter;
 
     String[] title = {"Human Resources Management", "Java: The Good Parts", "PHP: For Absolute Beginners", "Project Management: Twelfth Edition"};
     int[] images = {R.drawable.hr_book, R.drawable.java_book, R.drawable.php_book, R.drawable.pm_book};
     String[] descriptions = {"A guide to managing hoomans", "Only the essentials, no demoing", "Recommended as a base for little to zero experience", "12th edition, keep em coming"};
-    ArrayList<Book> books;
-    LibraryAdapter libraryAdapter;
-    private DatabaseHelper databaseHelper;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
