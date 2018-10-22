@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="fck2068.example.loginpage">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -26,7 +28,8 @@
             android:screenOrientation="portrait" />
         <activity android:name=".activities.LibraryActivity" />
         <activity android:name=".activities.TimerActivity" />
-        <activity android:name=".activities.EmailActivity"></activity>
+        <activity android:name=".activities.EmailActivity" />
+        <activity android:name=".activities.MapsActivity"></activity>
     </application>
-    <uses-permission android:name="android.permission.INTERNET"/>
+
 </manifest>

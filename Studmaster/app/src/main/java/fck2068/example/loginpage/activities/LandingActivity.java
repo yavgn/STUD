@@ -102,6 +102,8 @@ public class LandingActivity extends AppCompatActivity implements View.OnClickLi
                 }
                 if(position==3){
                     Toast.makeText(LandingActivity.this, "Location clicked...", Toast.LENGTH_SHORT).show();
+                    Intent mapsIntent = new Intent( LandingActivity.this,MapsActivity.class);
+                    startActivity(mapsIntent);
                 }
             }
         });
