@@ -42,7 +42,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register_activity);
-//        getSupportActionBar().hide();
 
         initViews();
         initListeners();

@@ -41,16 +41,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_activity);
        // getSupportActionBar().hide();
+
         session = new Session(this);
-
-        initViews();
-        initListeners();
-        initObjects();
-
         if (session.statusLoggedIn()){
             startActivity(new Intent(LoginActivity.this,LandingActivity.class));
             finish();
         }
+
+        initViews();
+        initListeners();
+        initObjects();
     }
     private void initViews(){
         nestedScrollView = (NestedScrollView) findViewById(R.id.nestedScrollView);
