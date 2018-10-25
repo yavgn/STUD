@@ -27,4 +27,5 @@
     <string name="subject">Subject</string>
     <string name="add_message_here">Add message here</string>
     <string name="map">map</string>
+    <string name="sending">Send</string>
 </resources>

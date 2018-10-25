@@ -29,7 +29,8 @@
         <activity android:name=".activities.LibraryActivity" />
         <activity android:name=".activities.TimerActivity" />
         <activity android:name=".activities.EmailActivity" />
-        <activity android:name=".activities.MapsActivity"></activity>
+        <activity android:name=".activities.MapsActivity">
+        </activity>
     </application>
 
 </manifest>
