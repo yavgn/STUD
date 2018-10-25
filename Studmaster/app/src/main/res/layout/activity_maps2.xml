@@ -19,5 +19,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/map-campus" />
+        app:srcCompat="@drawable/map_campus" />
 </android.support.constraint.ConstraintLayout>

@@ -14,7 +14,7 @@ public class MapsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_maps2);
 
         ImageView mapImage = findViewById(R.id.mapImage);
-        int imageResource = getResources().getIdentifier("@drawable/map-campus.png",null,this.getPackageName());
+        int imageResource = getResources().getIdentifier("@drawable/map_campus.png",null,this.getPackageName());
         mapImage.setImageResource(imageResource);
 
 
